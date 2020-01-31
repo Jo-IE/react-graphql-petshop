@@ -4,7 +4,18 @@ This is a full stack ecommerce pet shop application built in React (React router
 
 To run the application:
 
-1. Clone this repository (`git clone`).
+Running this application requires a mongoDB connection string. Connection strings can be retrieved from the mongoDB [site]('https://www.mongodb.com/)
+
+1. Create an account or login.
+2. On the home screen, click on 'Build a cluster'.
+3. Follow the steps to create a new cluster on the free tier.
+4. After creating a new cluster, you will be taken to a Cluster overview screen. Click on Connect and a modal will open up showing connection options.
+5. Follow the steps listed, making sure to save the username and password you select. On the next screen, select the option to get a connection string.
+6. In the string, replace `<password>` with the password you selected. Save the string as `MONGO_URI` in a `.env` file in the root of the project.
+
+After retrieving the MONGO connection string, you can run the application using the following steps:
+
+1. Clone this repository (`git clone https://github.com/Jo-IE/react-graphql-petshop.git`).
 2. Install dependencies (`npm i && cd client && npm i`)
 3. Start the server and client `cd .. && npm run devstart`.
 
@@ -21,6 +32,6 @@ A user can browse through products (`/products`), view more information about th
 - Currently, the application does not support user authentication to save shopping cart information to the database.
 - A feature for canceling an order could also be added.
 - Protecting routes such as `/checkout` and `/confirmation` so that a user only sees them when they have placed a valid order.
-- Adding a payment method such as paypal, ect.
+- Adding a payment method such as paypal, etc.
 - Using more extensive user input validation especially on the backend with a library such as express-validator.
-- Adding more unit tests for the frontend to test each component because as it stands, the tests are mostly for the error components.
+- Adding more unit tests for the frontend to test each component because as it stands, the frontend tests are mostly for the error components.
