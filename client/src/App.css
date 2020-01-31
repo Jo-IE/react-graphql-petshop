@@ -1,0 +1,75 @@
+:root {
+  --mainBlue: #76a9ff;
+  --lightBlue: #f4f8fd;
+  --mainOrange: #e55934;
+  --mainWhite: #fff;
+  --mainDark: #773344;
+  --mainGreen: #9bc53d;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif !important;
+  background: var(--mainWhite) !important;
+  color: var(--mainBlue) !important;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 20vh;
+}
+
+.text-title {
+  font-family: 'Lexend Deca', sans-serif;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.text-orange {
+  color: var(--mainOrange);
+}
+.text-blue {
+  color: var(--mainBlue);
+}
+
+.text-bright {
+  color: var(--lightOrange);
+}
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: var(--mainDark);
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--mainDark) !important;
+}
+
+.btn-black:hover {
+  background: var(--mainDark) !important;
+  color: var(--mainWhite) !important;
+}
+
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainGreen);
+}
+
+.hero {
+  min-width: 100vw;
+  min-height: 25vh;
+
+  background: #f4f8fd;
+}
+
+.hero .card {
+  min-height: 30vh;
+  width: 33%;
+  position: relative;
+  left: 4%;
+  top: 105%;
+  transition: all 0.5s linear;
+}
+
+.fa-window-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
