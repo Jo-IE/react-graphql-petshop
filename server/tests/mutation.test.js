@@ -42,8 +42,6 @@ describe('GraphQL', () => {
           'mutation { createUser(userInput: { email: "email3@email.com", address: "hooli ave"})  }'
       })
       .then(res => {
-        console.log(res);
-
         res.body.data.should.have.property('createUser');
         res.body.data.createUser.should.be.a('string');
 
