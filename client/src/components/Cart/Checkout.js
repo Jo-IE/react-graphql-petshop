@@ -7,7 +7,7 @@ import { CREATE_ORDER } from '../../graphql/mutations/order';
 import { useMutation } from '@apollo/react-hooks';
 
 const Checkout = props => {
-  const [createOrder, { data }] = useMutation(CREATE_ORDER);
+  const [createOrder] = useMutation(CREATE_ORDER);
 
   return (
     <ProductConsumer>
@@ -76,7 +76,7 @@ const Checkout = props => {
                     props.history.push('/confirmation');
                   });
               }}
-              disabled={value.cart.length == 0 ? true : false}
+              disabled={value.cart.length === 0 ? true : false}
             >
               {' '}
               Place Order

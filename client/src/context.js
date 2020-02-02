@@ -30,7 +30,7 @@ class ProductProvider extends Component {
   addToCart = (id, data) => {
     const product = this.getItem(id, data);
     const tempCart = [...this.state.cart];
-    if (tempCart.indexOf(product) != -1) {
+    if (tempCart.indexOf(product) !== -1) {
       this.increment(id);
     } else {
       product.count = 1;
@@ -190,7 +190,6 @@ class ProductProvider extends Component {
   validateInput = () => {
     const errors = [];
     this.setState(prevState => {
-      let noError = false;
       if (prevState.user.email.length === 0) {
         errors.push('Please enter an email address');
       }
@@ -205,7 +204,7 @@ class ProductProvider extends Component {
         inputErrors: errors
       };
     });
-    return errors.length == 0 ? true : false;
+    return errors.length === 0 ? true : false;
   };
 
   getOrderNumber = data => {

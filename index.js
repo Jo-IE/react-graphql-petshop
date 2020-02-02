@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const graphQlSchema = require('./server/graphql/schema/index');
 const graphQlResolvers = require('./server/graphql/resolvers/index');
 const cors = require('cors');
+const db = require('./server/db');
 
 require('dotenv').config();
 
@@ -25,7 +26,7 @@ app.use(
     graphiql: true
   })
 );
-
+db();
 app.listen(process.env.PORT || 5000, () =>
   console.log('Sever is now listening on port 5000')
 );

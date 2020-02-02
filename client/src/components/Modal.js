@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { ProductConsumer } from '../context';
 import { MainButton } from './Buttons/MainButton';
@@ -9,7 +9,7 @@ const Modal = props => {
     <ProductConsumer>
       {value => {
         const { modalOpen, closeModal } = value;
-        const { _id, image, title, price } = value.modalProduct;
+        const { image, title, price } = value.modalProduct;
 
         if (!modalOpen) {
           return null;

@@ -1,4 +1,6 @@
-[
+const Product = require('./models/product');
+
+const Products = [
   {
     title: 'Teacup Kitten',
     description: ` A wizard’s job is to vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun TV quiz game.`,
@@ -70,3 +72,30 @@
     inStock: 4
   }
 ];
+
+function insert() {
+  Product.find({})
+    .then(products => {
+      if (products == null) {
+        Products.forEach(item => {
+          const { title, description, image, count, price, inStock } = item;
+          const dbProduct = new Product({
+            title,
+            description,
+            image,
+            count,
+            price,
+            inStock
+          });
+          dbProduct
+            .save()
+            .then(item => item)
+            .catch(err => console.log(err));
+        });
+      }
+      console.log('database already populated');
+    })
+    .catch(err => console.log(err));
+}
+
+module.exports = insert;
