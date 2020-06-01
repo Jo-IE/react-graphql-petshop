@@ -29,9 +29,12 @@ A user can browse through products (`/products`), view more information about th
 
 ## Feature Extensions/ Additions
 
-- Currently, the application does not support user authentication to save shopping cart information to the database.
-- A feature for canceling an order could also be added.
-- Protecting routes such as `/checkout` and `/confirmation` so that a user only sees them when they have placed a valid order.
-- Adding a payment method such as paypal, etc.
+- Currently, the application does not support user authentication to save shopping cart information to the database. - Passport (graphql suggests express-jwt because of easier to integrate and simplicity) ffor backend, protected routes with react router for ffrontend but still want users that are not logged in to checkout and view products.
+
+- A feature for canceling an order could also be added. - new mutation to API as well as resolver function.
+- Protecting routes such as `/checkout` and `/confirmation` so that a user only sees them when they have placed a valid order. - redirect to empty cart if cart is empty. (get from state) in render method.
+- Adding a payment method such as paypal, etc. paypal api docs or stripe etc.
 - Using more extensive user input validation especially on the backend with a library such as express-validator.
 - Adding more unit tests for the frontend to test each component because as it stands, the frontend tests are mostly for the error components.
+
+express? recommended by graphql docs and easy to use
